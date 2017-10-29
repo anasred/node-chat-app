@@ -5,7 +5,7 @@ const socketIO = require('socket.io');
 
 const publicPath = path.join(__dirname, '../public');
 // this is for deploying on heroku
-const port = process.env.PORT || 50001;
+const port = process.env.PORT || 50002;
 var app = express();
 var server = http.createServer(app);
 var io = socketIO(server);
@@ -30,6 +30,6 @@ io.on('connection', (socket) => {
     });
 });
 
-server.listen(port, () => { 
+server.listen(port, () => {
     console.log(`server starts at port ${port}`)
 });
